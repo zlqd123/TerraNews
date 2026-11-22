@@ -1,0 +1,15 @@
+# 本地编译验证用工程与引用库（打包由 tModLoader 的 -build 完成，不进仓库）
+build/
+lib/
+
+# tModLoader / VS 产物
+*.tmod
+*.dll
+*.pdb
+*.user
+.vs/
+obj/
+bin/
+
+# 旧版 build.txt 备份
+TerraNews.build.txt
