@@ -20,8 +20,9 @@ tModLoader 新闻播报 mod：每天 04:30（游戏内时间）用一条游戏�
 
 ## 从源码构建
 
+mod 源码在 [`tModLoader/`](tModLoader/) 子目录。把它作为 `ModSources/TerraNews/` 放进 tModLoader 存档目录（本地开发用 junction 链接过去），然后：
+
 ```
-把本目录放到 tModLoader 的 ModSources/TerraNews/
 启动 tModLoader 后在「开发 mod」里点 TerraNews → 构建
 ```
 
@@ -31,7 +32,11 @@ tModLoader 新闻播报 mod：每天 04:30（游戏内时间）用一条游戏�
 tModLoader.dll -server -build "<ModSources>\TerraNews\"
 ```
 
-目录里的 `build/` 与 `lib/`（本地编译验证用的 csproj 与引用 dll，需自行从 tModLoader 安装目录复制 `tModLoader.dll`、`FNA.dll`、`ReLogic.dll`、`log4net.dll`、`Newtonsoft.Json.dll`）不随仓库分发，构建 mod 本体不需要它们。
+`tModLoader/build/` 与 `tModLoader/lib/`（本地编译验证用的 csproj 与引用 dll，需自行从 tModLoader 安装目录复制 `tModLoader.dll`、`FNA.dll`、`ReLogic.dll`、`log4net.dll`、`Newtonsoft.Json.dll`）不随仓库分发，构建 mod 本体不需要它们。
+
+## 灵感来源
+
+播报语义移植自 [UnrealMultiple/TShockPlugin](https://github.com/UnrealMultiple/TShockPlugin) 中的同名 TShock 插件——日报看板、旅商货架、草药提醒的触发行为照搬自它；TShock 侧的服务器也可以直接使用那个插件。
 
 ## 许可
 
